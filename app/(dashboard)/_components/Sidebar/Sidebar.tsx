@@ -9,7 +9,7 @@ const Sidebar = () => {
       {" "}
       <div className=" p-0 w-full">
         <Logo />
-        <div className="flex mt-4 justify-center">
+        <div className="flex mt-4 justify-center md:hidden">
           <UserButton
             afterSignOutUrl="/"
             appearance={{

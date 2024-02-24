@@ -10,12 +10,12 @@ interface DashBoardLayoutProps {
 const DashBoardLayout = async ({ params }: DashBoardLayoutProps) => {
   const user = await currentUser();
   return (
-    <div className="bg-neutral-900  text-white h-full">
-      <div className="text-4xl h-20 flex justify-between border-b border-[#ffffff25] w-full items-center pl-2">
+    <div className="dark:bg-neutral-900 bg-neutral-200 text-black dark:text-white h-full">
+      <div className="text-4xl h-20 flex justify-between border-b border-[#00000089]  dark:border-[#ffffff25] w-full items-center pl-2">
         Taskify
         <div className="w-full md:px-8 px-4">
           <Input
-            className="bg-neutral-800  border-[#ffffff25] ring-0 border active:ring-0 w-full"
+            className="bg-neutral-300 dark:bg-neutral-800  border-[#ffffff25] ring-0 border active:ring-0 w-full"
             placeholder="Search your boards "
           />
         </div>
@@ -41,7 +41,7 @@ const DashBoardLayout = async ({ params }: DashBoardLayoutProps) => {
         <div className="text-3xl font-semibold pt-4 pl-4">
           Hi {user?.firstName} !
         </div>
-        <div className="text-[#ffffff50] pl-4 -mt-1">
+        <div className="text-[#00000089] dark:text-[#ffffff50] pl-4 -mt-1">
           optimize and increase your productivity by using Taskify
         </div>
       </div>

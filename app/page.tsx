@@ -5,6 +5,5 @@ import { redirect } from "next/navigation";
 
 export default async function Home() {
   const user = await initialProfile();
-
   return redirect(`/${user?.id}`);
 }

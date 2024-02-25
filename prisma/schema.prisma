@@ -23,4 +23,20 @@ model User {
 
   createdAt DateTime @default(now())
   created DateTime @updatedAt
+
+  boards Board[]
+}
+
+model Board {
+  id String @id @default(uuid())
+  name String
+  coverImage String @db.Text 
+  
+  ownerId String
+  owner User @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([ownerId])
 }

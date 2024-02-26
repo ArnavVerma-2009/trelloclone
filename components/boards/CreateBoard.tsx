@@ -33,6 +33,7 @@ const CreateBoard = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       await axios.post("/api/boards", values);
+      window.location.reload()
     } catch (error) {
       console.log(error);
     }
@@ -42,7 +43,7 @@ const CreateBoard = () => {
 
   return (
     <>
-      <div className="mt-4  flex justidy-center items-center bg-neutral-900/95 border border-[#ffffff25] px-4 py-2 spaxe-y-2  w-48 h-44  rounded-xl ">
+      <div className="mt-4 shadow-md shadow-[#00000010] flex justidy-center items-center bg-neutral-900/95 border border-[#ffffff25] px-4 py-2 spaxe-y-2  w-[calc((100vh / 3) - 10px)] p-2 h-44  rounded-xl ">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}

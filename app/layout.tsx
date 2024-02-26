@@ -26,11 +26,11 @@ export default function RootLayout({
       }}
     >
       <html lang="en" suppressHydrationWarning>
-        <body className={cn(inter.className, "bg-white dark:bg-[#313338]")}>
+        <body className={cn(inter.className, "bg-white dark:bg-neutral-900")}>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
-            storageKey="032iod98"            
+            storageKey="032iod98"
           >
             {children}
           </ThemeProvider>

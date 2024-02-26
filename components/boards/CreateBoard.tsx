@@ -33,7 +33,7 @@ const CreateBoard = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       await axios.post("/api/boards", values);
-      window.location.reload()
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }

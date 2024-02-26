@@ -1,7 +1,6 @@
 import { Logo } from "@/components/icon";
 import { ModeToggle } from "@/components/mode-toggle";
 import { UserButton, UserProfile } from "@clerk/nextjs";
-import Link from "next/link";
 import React from "react";
 
 const Sidebar = () => {

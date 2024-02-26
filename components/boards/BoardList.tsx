@@ -14,8 +14,8 @@ export const BoardList = async () => {
   return (
     <>
       {boards.map((board) => (
-        <Link href={`/${ownerId?.id}/boards/${board.id}`} key={board.id}>
-          <div className="mt-4  shadow-md items-center flex justify-end overflow-hidden bg-[#00000090]   w-[calc((100vh / 3)-10px] h-44  rounded-xl">
+        <Link href={`/${ownerId?.id}/board/${board.id}`} key={board.id}>
+          <div className=" mt-4 shadow-md items-center flex justify-end overflow-hidden bg-[#00000090] h-[calc((100vh / 3)]    w-[calc((100vh / 3) + 6px] h-44  rounded-xl">
             <div
               className="h-full w-full flex justify-start items-end text-2xl font-bold "
               style={{

@@ -21,7 +21,7 @@ const Projects = () => {
     <>
       <div className="">
         <div className="h-full  flex border-b border-[#ffffff25] w-full" />
-        <div className="grid grid-cols-4  w-auto space-x-2 px-4 h-full ">
+        <div className="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-3  w-auto gap-x-4 px-4 h-full ">
           <CreateBoard />
           <BoardList />
         </div>

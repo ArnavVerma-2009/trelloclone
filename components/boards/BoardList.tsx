@@ -9,6 +9,9 @@ export const BoardList = async () => {
     where: {
       ownerId: ownerId?.id,
     },
+    orderBy: {
+      createdAt : "desc"
+    },
   });
 
   return (

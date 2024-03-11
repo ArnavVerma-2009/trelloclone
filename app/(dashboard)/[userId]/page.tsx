@@ -1,6 +1,4 @@
-import { Input } from "@/components/ui/input";
-import { CurrentProfile } from "@/lib/current-profile";
-import { UserButton, currentUser } from "@clerk/nextjs";
+
 import Navbar from "./_components/Navbar";
 import Projects from "./_components/Projects/Projects";
 import Welcome from "./_components/Welcome";

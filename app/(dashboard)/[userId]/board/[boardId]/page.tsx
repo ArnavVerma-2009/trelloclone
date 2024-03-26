@@ -10,9 +10,15 @@ interface BoardPageProps {
 }
 
 const page = async ({ params }: BoardPageProps) => {
+  const board = await db.board.findUnique({
+    where: {
+      id: params.boardId,
+    },
+  });
+
   return (
     <div>
-      <BoardPage boardId={params.boardId} />
+      <BoardPage name={board?.name} imageUrl={board?.coverImage} id={board?.id} />
     </div>
   );
 };

@@ -38,7 +38,23 @@ export async function POST(req: Request) {
       },
     });
 
-    return NextResponse.json(board);
+    const list = await db.list.createMany({
+      data: [
+        {
+          name: "Todo",
+          boardId: board.id,
+        },
+        {
+          name: "Doing",
+          boardId: board.id,
+        },
+        {
+          name: "Done",
+          boardId: board.id,
+        },
+      ],
+    });
+    return NextResponse.json({ board, list });
   } catch (error) {
     console.log(error);
     return new NextResponse("Internal Error", { status: 500 });

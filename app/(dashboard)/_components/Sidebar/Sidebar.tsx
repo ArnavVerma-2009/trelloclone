@@ -5,7 +5,7 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="h-full fixed  flex flex-col justify-between items-center w-20  bg-neutral-200 dark:bg-neutral-900 border-r border-[#00000090] dark:border-[#ffffff25] text-black dark:text-white">
+    <div className="h-full fixed  flex flex-col justify-between items-center w-20 bg-neutral-200 dark:bg-neutral-900 border-r border-[#00000090] dark:border-[#ffffff25] text-black dark:text-white">
       {" "}
       <div className=" p-0 w-full">
         <Logo />

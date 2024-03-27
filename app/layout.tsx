@@ -1,13 +1,13 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { dark } from "@clerk/themes";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { db } from "@/lib/db";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = DM_Sans({ subsets: ["latin"] });
 
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default function RootLayout({
         <head>
           <link rel="icon" href="/favicon.svg" />
         </head>
-        <body className={cn(inter.className, "bg-white dark:bg-neutral-900")}>
+        <body className={cn(font.className, "bg-white dark:bg-neutral-900")}>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"

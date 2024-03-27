@@ -18,7 +18,7 @@ const page = async ({ params }: BoardPageProps) => {
 
   return (
     <div>
-      <BoardPage name={board?.name} imageUrl={board?.coverImage} id={board?.id} />
+      <BoardPage name={board?.name} imageUrl={board?.coverImage as string} id={board?.id} />
     </div>
   );
 };

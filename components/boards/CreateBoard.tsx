@@ -47,21 +47,23 @@ const CreateBoard = () => {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex space-y-2  flex-col "
+            className="flex space-y-2 h-full w-full justify-center items-center  flex-col "
           >
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Create a board</FormLabel>
-                  <FormControl>
+                <FormItem className="w-full">
+                  <FormLabel className="text-lg font-bold flex justify-center">
+                    Create a board
+                  </FormLabel>
+                  <FormControl className="w-full bg-red-600">
                     <Input
                       type="text"
                       disabled={isSubmitting}
                       placeholder="name"
                       {...field}
-                      className="w-full flex bg-neutral-800 ring-0 border-0 outline-0 active:outline-0  active:border-0 active:ring-0"
+                      className="flex  bg-neutral-800 ring-1 ring-[#ffffff25] border-0 outline-0 active:outline-0  active:border-0 active:ring-0"
                     />
                   </FormControl>
                   <FormMessage />
